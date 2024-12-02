@@ -1,0 +1,116 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Contenedor principal */
+.confirmation-container {
+    text-align: center;
+    padding: 30px;
+    border: 2px solid #ff0000;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #111, #222);
+    box-shadow: 0 0 10px #ff3333;
+    max-width: 80%;
+    z-index: 10;
+}
+
+/* Texto de agradecimiento */
+.thank-you-text {
+    font-size: 2.5em;
+    color: #ff3333;
+    text-shadow: 0 0 5px #ff3333;
+    margin-bottom: 20px;
+}
+
+/* Texto de instrucciones */
+.instructions-text {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #25D366; /* Color verde de WhatsApp */
+    padding: 15px 25px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0 5px #25D366;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.whatsapp-link:hover {
+    background-color: #1EBE5A;
+    transform: scale(1.1);
+}
+
+/* Caracteres flotantes */
+.floating-characters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.floating-char {
+    position: absolute;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    animation: float 10s infinite ease-in-out;
+}
+
+.floating-char:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 12s;
+    color: #ff000052;
+}
+
+.floating-char:nth-child(2) {
+    top: 40%;
+    left: 60%;
+    animation-duration: 15s;
+    color: #ff3333;
+}
+
+.floating-char:nth-child(3) {
+    top: 70%;
+    left: 30%;
+    animation-duration: 8s;
+    color: #ff00006e;
+}
+
+.floating-char:nth-child(4) {
+    top: 50%;
+    left: 80%;
+    animation-duration: 10s;
+    color: #ff333369;
+}
+
+/* Animación de los caracteres flotantes */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
